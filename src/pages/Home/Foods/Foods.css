@@ -1,9 +1,8 @@
-.background-img{
+.background-img {
     background-image: url('../../../assets/images/background-image.png');
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
-    width: 100%;
     width: 100%;
     background-position: 100%;
     display: flex;
@@ -12,18 +11,18 @@
     justify-content: center;
 }
 
-.input-field{
-   width: 500px;
-   border: none;
-   padding: 10px 20px;
-   border-radius: 50px;
+.input-field {
+    width: 500px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
 }
 
-.input-field:focus{
+.input-field:focus {
     outline-color: #f91944;
 }
 
-.search-btn{
+.search-btn {
     background-color: #f91944;
     color: #fff;
     border: none;
@@ -31,4 +30,26 @@
     padding: 10px 24px;
     position: relative;
     right: 95px;
+}
+
+
+/* responsive mobile device */
+@media screen and (max-width: 576px) {
+    .background-img {
+        height: 138px;
+        width: 100%;
+        background-size: 100%;
+        padding: 0px 10px;
+    }
+
+    .input-field {
+        width: 100%;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 50px;
+    }
+
+    .search-btn {
+        padding: 8px 24px;
+    }
 }
