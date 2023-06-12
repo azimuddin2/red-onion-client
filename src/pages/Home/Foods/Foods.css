@@ -32,6 +32,13 @@
     right: 95px;
 }
 
+.category-link{
+    list-style: none;
+    display: inline;
+    margin-right: 12px;
+
+}
+
 
 /* responsive mobile device */
 @media screen and (max-width: 576px) {
