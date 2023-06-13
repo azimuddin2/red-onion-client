@@ -1,14 +1,11 @@
 import React from 'react';
-import Foods from '../Foods/Foods';
-import { Outlet, useLoaderData } from 'react-router-dom';
-import Categories from '../../../components/Categories/Categories';
+import Foods from '../FoodSection/Foods/Foods';
 
 const Home = () => {
-    const foods = useLoaderData();
 
     return (
         <div>
-            <Foods foods={foods}></Foods>
+            <Foods></Foods>
         </div>
     );
 };

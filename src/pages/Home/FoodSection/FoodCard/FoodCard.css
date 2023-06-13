@@ -1,0 +1,13 @@
+.food{
+    text-align: center;
+    padding: 20px 24px;
+    border-radius: 10px;
+}
+
+.food img{
+   width: 75%;
+}
+
+.food-name{
+    font-size: 18px;
+}
