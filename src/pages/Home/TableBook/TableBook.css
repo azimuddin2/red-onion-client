@@ -1,0 +1,27 @@
+.table-book-container{
+    background-image: url('../../../assets/images/table-booking.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%;
+    height: 570px;
+}
+
+.table-book{
+    display: grid;
+    margin: auto;
+}
+
+.input{
+    background-color: #f919463a;
+    width: 500px;
+    border: 1px solid black;
+    color: #fff;
+    border-radius: 2px;
+    padding: 8px;
+    margin-bottom: 12px;
+    outline: none;
+}
+/* 
+.input:focus {
+    outline-color: #f91944;
+} */

@@ -32,7 +32,7 @@ const Foods = () => {
                 />
                 <button class="search-btn">Search</button>
             </div>
-            <div className="container mt-5">
+            <div className="container my-5">
                 <Tabs defaultIndex={1} onSelect={(index) => setTabIndex(index)}>
                     <TabList>
                         <Tab>Breakfast</Tab>
