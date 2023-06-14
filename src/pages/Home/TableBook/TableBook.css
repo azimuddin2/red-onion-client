@@ -1,27 +1,50 @@
-.table-book-container{
-    background-image: url('../../../assets/images/table-booking.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 100%;
-    height: 570px;
-}
-
-.table-book{
+.table-book-container {
     display: grid;
-    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 80px 0px;
 }
 
-.input{
-    background-color: #f919463a;
-    width: 500px;
-    border: 1px solid black;
-    color: #fff;
-    border-radius: 2px;
-    padding: 8px;
-    margin-bottom: 12px;
-    outline: none;
+.table-book-info h1 {
+    margin-top: 40px;
+    color: #f91944;
+    font-size: 50px;
+    font-weight: 600;
 }
-/* 
-.input:focus {
-    outline-color: #f91944;
-} */
+
+.table-book-info h2 {
+    color: #151515;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.table-book-info p {
+    width: 80%;
+    color: #737373;
+}
+
+.check-icon {
+    color: #f91944;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.table-book-form {
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.book-btn {
+    background-color: #f91944;
+    width: 100%;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px 0px;
+}
+
+.react-datepicker__input-container .react-datepicker__calendar-icon {
+    position: absolute;
+    padding: 0px !important;
+    margin-top: 11px;
+    margin-left: 7px;
+}
