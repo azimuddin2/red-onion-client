@@ -3,6 +3,7 @@ import logo from '../../../assets/images/logo.png';
 import { FaEnvelope, FaPhone } from 'react-icons/fa';
 import { MdLocationOn } from 'react-icons/md';
 import './Footer.css';
+import ScrollToTop from 'react-scroll-to-top';
 
 const Footer = () => {
     return (
@@ -48,7 +49,15 @@ const Footer = () => {
                 </div>
             </div>
             <p className='copyright'><small>Copyright © 2023 Red Onion</small></p>
-
+            <ScrollToTop
+                className='d-flex align-items-center justify-content-center'
+                smooth
+                color='#fff'
+                width='16'
+                height='16'
+                top='400'
+                style={{ backgroundColor: '#f91944', padding: '10px', boxShadow: 'none' }}
+            ></ScrollToTop>
         </footer>
     );
 };
