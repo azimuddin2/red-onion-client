@@ -33,32 +33,6 @@
 }
 
 
-/* react tabs css modify */
-.react-tabs__tab-list {
-    border-bottom: none !important;
-    margin: 0 0 10px;
-    padding: 0;
-    text-align: center;
-}
-
-.react-tabs__tab {
-    display: inline-block;
-    border: none !important;
-    bottom: 0 !important;
-    position: relative;
-    list-style: none;
-    padding: 6px 12px;
-    cursor: pointer;
-}
-
-.react-tabs__tab--selected {
-    background: none !important;
-    border-bottom: 2px solid red !important;
-    color: red !important;
-    font-weight: 500;
-}
-
-
 /* responsive mobile device */
 @media screen and (max-width: 576px) {
     .background-img {

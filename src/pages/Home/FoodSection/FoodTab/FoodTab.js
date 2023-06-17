@@ -1,5 +1,6 @@
 import React from 'react';
 import FoodCard from '../FoodCard/FoodCard';
+import './FoodTab.css';
 
 const FoodTab = ({ items }) => {
     return (
