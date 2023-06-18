@@ -8,6 +8,17 @@ import "react-datepicker/dist/react-datepicker.css";
 const TableBook = () => {
     const [selectDate, setSelectDate] = useState(new Date());
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const date = form.date.value;
+        const person = form.person.value;
+
+        console.log(name, email, date, person);
+    };
+
     return (
         <section className='container table-book-container'>
             <div className='table-book-info'>
@@ -22,7 +33,7 @@ const TableBook = () => {
             </div>
             <div className='table-book-form shadow'>
                 <h2 className='text-center mb-3'>Book Your Table</h2>
-                <Form>
+                <Form onSubmit={handleSubmit}>
                     <Form.Group controlId="formBasicName" className='mb-3'>
                         <Form.Control
                             name='name'

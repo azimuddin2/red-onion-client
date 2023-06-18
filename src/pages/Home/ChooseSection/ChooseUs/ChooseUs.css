@@ -4,10 +4,20 @@
 }
 
 .choose-us-title h2 {
-    color: #444444;
-
+    color: #151515;
+    text-transform: capitalize;
 }
 
 .choose-us-title p {
     color: #737373;
+    width: 50%;
+    margin: auto;
+}
+
+
+/* responsive mobile device */
+@media screen and (max-width: 576px) {
+    .choose-us-title p {
+        width: 90%;
+    }
 }

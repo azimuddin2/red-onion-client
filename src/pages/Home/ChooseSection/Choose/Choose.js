@@ -11,7 +11,7 @@ const Choose = ({ choose }) => {
     }
 
     return (
-        <div className='col-4 choose'>
+        <div className='col-12 col-md-6 col-lg-4 choose'>
             <img src={image} alt="" />
             <div className='choose-info'>
                 <h3>{name}</h3>
@@ -20,15 +20,15 @@ const Choose = ({ choose }) => {
                     <span onClick={toggleReadMore}>
                         {
                             isReadMore ?
-                                <>
+                                <span style={{ cursor: 'pointer' }}>
                                     <span style={{ color: '#7ac948', fontWeight: '500', marginRight: '5px' }}>...read more</span>
                                     <BsArrowRightCircleFill style={{ color: '#7ac948' }}></BsArrowRightCircleFill>
-                                </>
+                                </span>
                                 :
-                                <>
+                                <span style={{ cursor: 'pointer' }}>
                                     <span style={{ color: '#7ac948', fontWeight: '500', marginRight: '5px' }}>show less</span>
                                     <BsArrowRightCircleFill style={{ color: '#7ac948' }}></BsArrowRightCircleFill>
-                                </>
+                                </span>
                         }
                     </span>
                 </p>

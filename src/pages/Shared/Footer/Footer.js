@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../../../assets/images/logo.png';
-import { FaEnvelope, FaPhone } from 'react-icons/fa';
+import { FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaPhone, FaTwitter } from 'react-icons/fa';
 import { MdLocationOn } from 'react-icons/md';
 import './Footer.css';
 import ScrollToTop from 'react-scroll-to-top';
@@ -29,8 +29,8 @@ const Footer = () => {
                 <div className='footer-second-part'>
                     <h5 className='company'>Company</h5>
                     <ul>
-                        <li><a href="/">About</a></li>
-                        <li><a href="/">Project</a></li>
+                        <li><a href="/">About Online Food</a></li>
+                        <li><a href="/">Sign up to Deliver</a></li>
                         <li><a href="/">Our Team</a></li>
                         <li><a href="/">Terms Conditions</a></li>
                         <li><a href="/">Web Development Privacy Policy</a></li>
@@ -40,11 +40,10 @@ const Footer = () => {
                     <h5>About us</h5>
                     <p>Hello there. First, I will introduce myself. My name is Azim Uddin and I am a Full Stack web developer. I have 2+ years of experience in web programming.</p>
                     <div className='social-icon'>
-                        {/* <img src={facebook} alt="facebook" />
-                        <img src={linkedin} alt="linkedin" />
-                        <img src={twitter} alt="twitter" />
-                        <img src={instagram} alt="instagram" />
-                        <img src={youtube} alt="youtube" /> */}
+                        <FaFacebook className='icon'></FaFacebook>
+                        <FaLinkedin className='icon'></FaLinkedin>
+                        <FaInstagram className='icon'></FaInstagram>
+                        <FaTwitter className='icon'></FaTwitter>
                     </div>
                 </div>
             </div>

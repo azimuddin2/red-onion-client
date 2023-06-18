@@ -12,19 +12,19 @@ const ChooseUs = () => {
             _id: 1,
             image: fastDelivery,
             name: "Table Booking",
-            description: "We’re hungry for the best things in life bringing the best food and redefining the shopping experience to our customers.foodpanda is multi national, fast-growing business that maintains its appeal as localised service with community ambition.",
+            description: "We’re hungry for the best things in life bringing the best food and redefining the shopping experience to our customers. foodpanda is multi national, fast-growing business that maintains its appeal as localised service with community ambition.",
         },
         {
             _id: 1,
             image: cookFood,
             name: "A Good Auto Responder",
-            description: "We’re hungry for the best things in life bringing the best food and redefining the shopping experience to our customers.foodpanda is multi national, fast-growing business that maintains its appeal as localised service with community ambition.",
+            description: "We’re hungry for the best things in life bringing the best food and redefining the shopping experience to our customers. foodpanda is multi national, fast-growing business that maintains its appeal as localised service with community ambition.",
         },
         {
             _id: 1,
             image: homeDelivery,
             name: "Home Delivery",
-            description: "We’re hungry for the best things in life bringing the best food and redefining the shopping experience to our customers.foodpanda is multi national, fast-growing business that maintains its appeal as localised service with community ambition.",
+            description: "We’re hungry for the best things in life bringing the best food and redefining the shopping experience to our customers. foodpanda is multi national, fast-growing business that maintains its appeal as localised service with community ambition.",
         },
     ];
 
@@ -32,7 +32,7 @@ const ChooseUs = () => {
         <section className='container'>
             <div className='choose-us-title'>
                 <h2>Why you choose us</h2>
-                <p>Barton waited twenty always repair in within we do. An delighted offending <br /> curiosity my is dashwoods at. Boy prosperous increasing surrounded.</p>
+                <p>Barton waited twenty always repair in within we do. An delighted offending curiosity my is dashwoods at. Boy prosperous increasing surrounded.</p>
             </div>
             <div className='row mb-3'>
                 {

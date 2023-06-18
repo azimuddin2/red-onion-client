@@ -48,3 +48,26 @@
     margin-top: 11px;
     margin-left: 7px;
 }
+
+
+/* responsive mobile device */
+@media screen and (max-width: 576px) {
+    .table-book-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0px;
+        margin-bottom: 60px;
+    }
+
+    .table-book-form {
+        padding: 30px;
+    }
+
+    .table-book-info{
+        width: 88%;
+        margin: auto;
+    }
+
+    .table-book-info p {
+        width: 100%;
+    }
+}
