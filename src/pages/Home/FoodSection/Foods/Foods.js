@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './Foods.css';
 import { useParams } from 'react-router-dom';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import FoodTab from '../FoodTab/FoodTab';
+import { useQuery } from '@tanstack/react-query';
+import Loading from '../../../Shared/Loading/Loading';
 
 const Foods = () => {
     const categories = ['breakfast', 'lunch', 'dinner'];
@@ -11,16 +13,26 @@ const Foods = () => {
     const initialIndex = categories.indexOf(category);
     const [tabIndex, setTabIndex] = useState(initialIndex);
 
-    const [foods, setFoods] = useState([]);
-    useEffect(() => {
-        fetch('http://localhost:5000/foods')
-            .then(res => res.json())
-            .then(data => setFoods(data))
-    }, [])
+    const { data: foods, isLoading, error } = useQuery({
+        queryKey: ['foods'],
+        queryFn: async () => {
+            const res = await fetch('http://localhost:5000/foods');
+            const data = await res.json();
+            return data;
+        }
+    });
 
-    const breakfast = foods.filter(food => food.category_id === 'breakfast');
-    const lunch = foods.filter(food => food.category_id === 'lunch');
-    const dinner = foods.filter(food => food.category_id === 'dinner');
+    const breakfast = foods?.filter(food => food.category_id === 'breakfast');
+    const lunch = foods?.filter(food => food.category_id === 'lunch');
+    const dinner = foods?.filter(food => food.category_id === 'dinner');
+
+    if (isLoading) {
+        return <Loading></Loading>
+    }
+
+    if (error) {
+        return <p style={{ color: '#f91944', textAlign: 'center' }}>error: {error.message}</p>
+    }
 
     return (
         <section>

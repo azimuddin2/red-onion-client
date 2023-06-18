@@ -10,4 +10,19 @@
 
 .food-name{
     font-size: 18px;
+    color: #444444;
+    padding-top: 18px;
+    padding-bottom: 6px;
+}
+
+.food-description {
+    color: #737373;
+    line-height: 0px;
+    font-size: 15px;
+}
+
+.food-price {
+    color: #151515;
+    font-weight: 500;
+    font-size: 18px;
 }
