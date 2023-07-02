@@ -1,11 +1,13 @@
 .food{
     text-align: center;
-    padding: 20px 24px;
+    /* padding: 20px 24px; */
+    padding-top: 30px;
+    padding-bottom: 20px;
     border-radius: 10px;
 }
 
 .food img{
-   width: 75%;
+   width: 60%;
 }
 
 .food-name{
@@ -25,4 +27,28 @@
     color: #151515;
     font-weight: 500;
     font-size: 18px;
+}
+
+.price-icon{
+    display: flex;
+    justify-content: center;
+}
+
+.shop-icon{
+    background-color: #f91944;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop-icon:hover {
+    background-color: #fff;
+    color: #f91944;
+    border: 1px solid #f91944;
 }

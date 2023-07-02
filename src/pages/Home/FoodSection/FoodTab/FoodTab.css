@@ -1,3 +1,9 @@
+.foods{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
 /* react tabs css modify */
 .react-tabs__tab-list {
     border-bottom: none !important;
@@ -21,4 +27,20 @@
     border-bottom: 2px solid #f91944 !important;
     color: #f91944 !important;
     font-weight: 500;
+}
+
+
+/* responsive mobile device */
+@media screen and (max-width: 576px) {
+    .foods{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+/* responsive tablet device */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .foods{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

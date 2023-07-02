@@ -35,33 +35,23 @@ const Foods = () => {
     }
 
     return (
-        <section>
-            <div className='background-img'>
-                <input
-                    type="text"
-                    class="input-field"
-                    placeholder="Search food items"
-                />
-                <button class="search-btn">Search</button>
-            </div>
-            <div className="container my-5">
-                <Tabs defaultIndex={1} onSelect={(index) => setTabIndex(index)}>
-                    <TabList>
-                        <Tab>Breakfast</Tab>
-                        <Tab>Lunch</Tab>
-                        <Tab>Dinner</Tab>
-                    </TabList>
-                    <TabPanel>
-                        <FoodTab items={breakfast}></FoodTab>
-                    </TabPanel>
-                    <TabPanel>
-                        <FoodTab items={lunch}></FoodTab>
-                    </TabPanel>
-                    <TabPanel>
-                        <FoodTab items={dinner}></FoodTab>
-                    </TabPanel>
-                </Tabs>
-            </div>
+        <section className="container my-5">
+            <Tabs defaultIndex={1} onSelect={(index) => setTabIndex(index)}>
+                <TabList>
+                    <Tab>Breakfast</Tab>
+                    <Tab>Lunch</Tab>
+                    <Tab>Dinner</Tab>
+                </TabList>
+                <TabPanel>
+                    <FoodTab items={breakfast}></FoodTab>
+                </TabPanel>
+                <TabPanel>
+                    <FoodTab items={lunch}></FoodTab>
+                </TabPanel>
+                <TabPanel>
+                    <FoodTab items={dinner}></FoodTab>
+                </TabPanel>
+            </Tabs>
         </section>
     );
 };
