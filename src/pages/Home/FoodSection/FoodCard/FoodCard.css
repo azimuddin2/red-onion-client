@@ -1,16 +1,15 @@
-.food{
+.food {
     text-align: center;
-    /* padding: 20px 24px; */
     padding-top: 30px;
     padding-bottom: 20px;
     border-radius: 10px;
 }
 
-.food img{
-   width: 60%;
+.food img {
+    width: 60%;
 }
 
-.food-name{
+.food-name {
     font-size: 18px;
     color: #444444;
     padding-top: 18px;
@@ -29,12 +28,12 @@
     font-size: 18px;
 }
 
-.price-icon{
+.price-icon {
     display: flex;
     justify-content: center;
 }
 
-.shop-icon{
+.shop-icon {
     background-color: #f91944;
     color: #fff;
     width: 30px;
