@@ -22,7 +22,7 @@ const Header = () => {
                             </span>
                         </Nav.Link>
                         <Nav.Link as={Link} to="/">Home</Nav.Link>
-                        <Nav.Link href="/#contact">Contact Us</Nav.Link>
+                        <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
                         <Nav.Link as={Link} to="/login" className='login'>Login</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
