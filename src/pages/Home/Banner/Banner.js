@@ -57,7 +57,7 @@ const Banner = () => {
                 className="mySwiper"
                 modules={[A11y, Pagination, Navigation, Autoplay]}
                 autoplay={{
-                    delay: 2500,
+                    delay: 3000,
                     disableOnInteraction: false,
                 }}
                 navigation={true}

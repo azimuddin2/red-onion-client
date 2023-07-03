@@ -4,7 +4,7 @@ import './FoodTab.css';
 
 const FoodTab = ({ items }) => {
     return (
-        <div className='mt-5 foods'>
+        <div className='foods'>
             {
                 items.map(item => <FoodCard
                     key={item._id}
