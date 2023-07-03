@@ -46,6 +46,14 @@
     color: #f91944;
 }
 
+.show-password {
+    position: absolute;
+    color: #2A414F;
+    cursor: pointer;
+    margin-left: 368px;
+    margin-top: -50px;
+}
+
 
 /* responsive mobile device */
 @media screen and (max-width: 576px) {
@@ -56,5 +64,9 @@
 
     .form-btn {
         width: 340px;
+    }
+
+    .show-password {
+        margin-left: 314px;
     }
 }

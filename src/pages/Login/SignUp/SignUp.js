@@ -1,9 +1,12 @@
 import React from 'react';
-import './SignUp.css';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/images/logo-dark.png';
+import { useState } from 'react';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const SignUp = () => {
+    const [showPassword, setShowPassword] = useState(false);
+
     return (
         <section className='login-container'>
             <div>
@@ -41,12 +44,23 @@ const SignUp = () => {
                         </div>
                         <div>
                             <input
-                                type="password"
+                                type={showPassword ? "text" : "password"}
                                 name="password"
                                 placeholder='Password'
                                 className='input-field'
                                 required
                             />
+                            <p
+                                onClick={() => setShowPassword(!showPassword)}
+                                className='show-password'
+                            >
+                                {
+                                    showPassword ?
+                                        <FaEyeSlash></FaEyeSlash>
+                                        :
+                                        <FaEye></FaEye>
+                                }
+                            </p>
                         </div>
                         <button className='form-btn' type="submit">Sign Up</button>
                     </form>
