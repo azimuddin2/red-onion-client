@@ -1,0 +1,46 @@
+.contact-form{
+    background: var(--dark-07, #F3F3F3);
+    padding: 60px;
+    width: 85%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.name-email-field{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.phone-field{
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 14px;
+}
+
+.phone-field{
+    outline-color: #f91944;
+}
+
+.message-field{
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 14px;
+}
+
+.message-field{
+    outline-color: #f91944;
+}
+
+.contact-form-btn{
+    background-color: #f91944;
+    color: #fff;
+    border: none;
+    padding: 8px 24px;
+    font-weight: 500;
+    border-radius: 5px;
+}

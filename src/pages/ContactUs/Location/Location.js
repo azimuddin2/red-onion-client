@@ -8,14 +8,14 @@ const Location = () => {
     return (
         <section className='my-5'>
             <div>
-                <h5 className='visit-us'>---Visit Us---</h5>
-                <h1 className='our-location'>Our Location</h1>
+                <h5 className='contact-short-title'>---Visit Us---</h5>
+                <h1 className='contact-title'>Our Location</h1>
             </div>
 
             <div className='location-container'>
                 <div className='location-box'>
                     <div className='location-icon'>
-                        <BiPhoneCall className='fs-4'></BiPhoneCall>
+                        <BiPhoneCall className='fs-2'></BiPhoneCall>
                     </div>
                     <div className='location-info'>
                         <h2>Phone</h2>
@@ -25,7 +25,7 @@ const Location = () => {
 
                 <div className='location-box'>
                     <div className='location-icon'>
-                        <MdLocationOn className='fs-4'></MdLocationOn>
+                        <MdLocationOn className='fs-2'></MdLocationOn>
                     </div>
                     <div className='location-info'>
                         <h2>Address</h2>
@@ -35,7 +35,7 @@ const Location = () => {
 
                 <div className='location-box'>
                     <div className='location-icon'>
-                        <FaClock className='fs-5'></FaClock>
+                        <FaClock className='fs-3'></FaClock>
                     </div>
                     <div className='location-info'>
                         <h2>WORKING HOURS</h2>
