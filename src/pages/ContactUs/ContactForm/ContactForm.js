@@ -8,7 +8,6 @@ const ContactForm = () => {
                 <h5 className='contact-short-title'>---Send Us a Message---</h5>
                 <h1 className='contact-title'>CONTACT FORM</h1>
             </div>
-
             <div className='contact-form'>
                 <form action="">
                     <div className='name-email-field'>
@@ -33,8 +32,6 @@ const ContactForm = () => {
                             />
                         </div>
                     </div>
-
-
                     <div>
                         <label className='input-title' htmlFor="">Phone*</label> <br />
                         <input
@@ -45,26 +42,21 @@ const ContactForm = () => {
                             required
                         />
                     </div>
-
                     <div>
                         <label className='input-title' htmlFor="">Message*</label> <br />
                         <textarea
                             name="message"
                             cols="30"
                             rows="6"
+                            placeholder='Write your message here'
                             className='message-field'
                         ></textarea>
                     </div>
-
-
                     <div className='d-flex justify-content-center mt-3'>
                         <button className='contact-form-btn' type="submit">Send Message</button>
                     </div>
-
                 </form>
             </div>
-
-
         </section>
     );
 };
