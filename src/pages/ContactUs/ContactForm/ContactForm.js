@@ -2,6 +2,18 @@ import React from 'react';
 import './ContactForm.css';
 
 const ContactForm = () => {
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const phone = form.phone.value;
+        const message = form.message.value;
+
+        console.log(name, email, phone, message);
+    };
+
     return (
         <section className='mb-5'>
             <div>
@@ -9,14 +21,14 @@ const ContactForm = () => {
                 <h1 className='contact-title'>CONTACT FORM</h1>
             </div>
             <div className='contact-form'>
-                <form action="">
+                <form onSubmit={handleSubmit}>
                     <div className='name-email-field'>
                         <div>
                             <label className='input-title' htmlFor="">Name*</label> <br />
                             <input
                                 type="text"
                                 name="name"
-                                className='input-field'
+                                className='name-field'
                                 placeholder='Enter your name'
                                 required
                             />
@@ -26,7 +38,7 @@ const ContactForm = () => {
                             <input
                                 type="email"
                                 name="email"
-                                className='input-field'
+                                className='email-field'
                                 placeholder='Enter your email'
                                 required
                             />

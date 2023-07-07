@@ -1,0 +1,49 @@
+.contact-us-image {
+    background-image: url('../../../assets/images/banner.jpg');
+    background-size: cover;
+    height: 100%;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    padding: 120px 100px;
+}
+
+.contact-us-info {
+    background: rgba(21, 21, 21, 0.60);
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    padding: 60px 0px;
+}
+
+.contact-us-info h1 {
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.contact-us-info p{
+    color: #FFF;
+    font-weight: 400;
+}
+
+
+/* responsive mobile device */
+@media screen and (max-width: 576px) {
+    .contact-us-image {
+        padding: 40px 0px;
+    }
+    
+    .contact-us-info {
+        width: 80%;
+        margin: auto;
+        padding: 20px 0px;
+    }
+
+    .contact-us-info h1 {
+        font-size: 40px;
+    }
+    
+}

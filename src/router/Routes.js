@@ -4,7 +4,7 @@ import Home from "../pages/Home/Home/Home";
 import Foods from "../pages/Home/FoodSection/Foods/Foods";
 import Login from "../pages/Login/Login/Login";
 import SignUp from "../pages/Login/SignUp/SignUp";
-import ContactUs from "../pages/ContactUs/ContactUs";
+import ContactUs from "../pages/ContactUs/ContactUs/ContactUs";
 
 const router = createBrowserRouter([
     {

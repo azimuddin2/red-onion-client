@@ -21,6 +21,30 @@
     gap: 20px;
 }
 
+.name-field {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 14px;
+}
+
+.name-field {
+    outline-color: #f91944;
+}
+
+.email-field {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 14px;
+}
+
+.email-field {
+    outline-color: #f91944;
+}
+
 .phone-field {
     width: 100%;
     border: none;
@@ -59,57 +83,14 @@
 @media screen and (max-width: 576px) {
     .contact-form {
         background: var(--dark-07, #F3F3F3);
-        padding: 60px;
-        width: 85%;
+        padding: 24px 12px;
+        width: 100%;
         margin: auto;
         margin-top: 30px;
     }
 
-    .input-title {
-        color: var(--dark-02, #444);
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        margin-bottom: 6px;
-    }
-
     .name-email-field {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .phone-field {
-        width: 100%;
-        border: none;
-        padding: 10px;
-        border-radius: 5px;
-        margin-bottom: 14px;
-    }
-
-    .phone-field {
-        outline-color: #f91944;
-    }
-
-    .message-field {
-        width: 100%;
-        border: none;
-        padding: 10px;
-        border-radius: 5px;
-        margin-bottom: 14px;
-    }
-
-    .message-field {
-        outline-color: #f91944;
-    }
-
-    .contact-form-btn {
-        background-color: #f91944;
-        color: #fff;
-        border: none;
-        padding: 8px 24px;
-        font-weight: 500;
-        border-radius: 5px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0px;
     }
 }
