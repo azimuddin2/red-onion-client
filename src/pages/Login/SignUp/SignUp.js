@@ -7,6 +7,17 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 const SignUp = () => {
     const [showPassword, setShowPassword] = useState(false);
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const phone = form.phone.value;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        console.log(name, phone, email, password);
+    };
+
     return (
         <section className='login-container'>
             <div>
@@ -14,7 +25,7 @@ const SignUp = () => {
                     <img src={logo} alt="" className='login-logo' />
                 </Link>
                 <div className='form-container'>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div>
                             <input
                                 type="text"
