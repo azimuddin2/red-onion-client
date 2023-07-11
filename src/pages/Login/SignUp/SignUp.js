@@ -1,11 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../../../assets/images/logo-dark.png';
 import { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
+import { useContext } from 'react';
+import { toast } from 'react-hot-toast';
 
 const SignUp = () => {
+    const { createUser, updateUserProfile } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -15,7 +23,28 @@ const SignUp = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        console.log(name, phone, email, password);
+        createUser(email, password)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+            handleUpdateUserProfile(name);
+            form.reset();
+            navigate(from, { replace: true });
+        })
+        .catch(error => {
+            toast.error(error.message);
+        })
+    };
+
+    const handleUpdateUserProfile = (name) => {
+        const profile = {
+            displayName: name
+        }
+        updateUserProfile(profile)
+            .then(() => { })
+            .catch(error => {
+                toast.error(error.message)
+            })
     };
 
     return (
