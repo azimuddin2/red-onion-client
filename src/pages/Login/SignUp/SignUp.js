@@ -27,7 +27,7 @@ const SignUp = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
-            handleUpdateUserProfile(name);
+            handleUpdateUserProfile(name, phone);
             form.reset();
             navigate(from, { replace: true });
         })
@@ -36,10 +36,12 @@ const SignUp = () => {
         })
     };
 
-    const handleUpdateUserProfile = (name) => {
+    const handleUpdateUserProfile = (name, phone) => {
         const profile = {
-            displayName: name
-        }
+            displayName: name,
+            phoneNumber: phone
+        };
+
         updateUserProfile(profile)
             .then(() => { })
             .catch(error => {

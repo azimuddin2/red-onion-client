@@ -20,6 +20,20 @@
     font-size: 14px;
 }
 
+.logout{
+    background-color: #f91944 !important;
+    border-radius: 100px;
+    text-align: center;
+    color: #ffffff !important;
+    padding: 6px 30px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+}
+
 .navbar-menu a {
     font-weight: 500;
     margin-right: 20px;
