@@ -3,12 +3,11 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../../../assets/images/logo-dark.png';
 import { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
-import { useContext } from 'react';
 import { toast } from 'react-hot-toast';
+import useAuth from '../../../hooks/useAuth';
 
 const SignUp = () => {
-    const { createUser, updateUserProfile } = useContext(AuthContext);
+    const { createUser, updateUserProfile } = useAuth();
     const [showPassword, setShowPassword] = useState(false);
 
     const navigate = useNavigate();
@@ -24,16 +23,16 @@ const SignUp = () => {
         const password = form.password.value;
 
         createUser(email, password)
-        .then(result => {
-            const user = result.user;
-            console.log(user);
-            handleUpdateUserProfile(name, phone);
-            form.reset();
-            navigate(from, { replace: true });
-        })
-        .catch(error => {
-            toast.error(error.message);
-        })
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                handleUpdateUserProfile(name, phone);
+                form.reset();
+                navigate(from, { replace: true });
+            })
+            .catch(error => {
+                toast.error(error.message);
+            })
     };
 
     const handleUpdateUserProfile = (name, phone) => {

@@ -1,13 +1,13 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import './Login.css';
 import logo from '../../../assets/images/logo-dark.png';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaEyeSlash, FaEye } from 'react-icons/fa';
-import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import { toast } from 'react-hot-toast';
+import useAuth from '../../../hooks/useAuth';
 
 const Login = () => {
-    const { signIn } = useContext(AuthContext);
+    const { signIn } = useAuth();
     const [showPassword, setShowPassword] = useState(false);
 
     const navigate = useNavigate();
@@ -21,15 +21,15 @@ const Login = () => {
         const password = form.password.value;
 
         signIn(email, password)
-        .then(result => {
-            const user = result.user;
-            console.log(user);
-            form.reset();
-            navigate(from, { replace: true });
-        })
-        .catch(error => {
-            toast.error(error.message);
-        })
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                form.reset();
+                navigate(from, { replace: true });
+            })
+            .catch(error => {
+                toast.error(error.message);
+            })
     };
 
     return (

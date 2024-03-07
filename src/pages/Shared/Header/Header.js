@@ -4,19 +4,18 @@ import { Link } from 'react-router-dom';
 import logo from '../../../assets/images/logo-dark.png';
 import { FiShoppingCart } from 'react-icons/fi';
 import './Header.css';
-import { useContext } from 'react';
-import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import { toast } from 'react-hot-toast';
+import useAuth from '../../../hooks/useAuth';
 
 const Header = () => {
-    const {user, logOut} = useContext(AuthContext);
-    
+    const { user, logOut } = useAuth();
+
     const handleLogOut = () => {
         logOut()
-        .then( () => {})
-        .catch(error => {
-            toast.error(error.message);
-        })
+            .then(() => { })
+            .catch(error => {
+                toast.error(error.message);
+            })
     };
 
     return (
@@ -38,9 +37,9 @@ const Header = () => {
                         <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
                         {
                             user?.uid ?
-                            <button onClick={handleLogOut} className='logout'>Logout</button>
-                            : 
-                            <Nav.Link as={Link} to="/login" className='login'>Login</Nav.Link>
+                                <button onClick={handleLogOut} className='logout'>Logout</button>
+                                :
+                                <Nav.Link as={Link} to="/login" className='login'>Login</Nav.Link>
                         }
                     </Nav>
                 </Navbar.Collapse>

@@ -6,7 +6,7 @@ const FoodTab = ({ items }) => {
     return (
         <div className='foods'>
             {
-                items.map(item => <FoodCard
+                items?.map(item => <FoodCard
                     key={item._id}
                     item={item}
                 ></FoodCard>)
