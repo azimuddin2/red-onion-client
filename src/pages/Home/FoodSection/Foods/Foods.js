@@ -7,16 +7,16 @@ import FoodTab from '../FoodTab/FoodTab';
 import { useQuery } from '@tanstack/react-query';
 import Loading from '../../../Shared/Loading/Loading';
 
-const Foods = () => {
+const Foods = ({ search }) => {
     const categories = ['breakfast', 'lunch', 'dinner'];
     const { category } = useParams();
     const initialIndex = categories.indexOf(category);
     const [tabIndex, setTabIndex] = useState(initialIndex);
 
     const { data: foods, isLoading, error } = useQuery({
-        queryKey: ['foods'],
+        queryKey: ['foods', search],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/foods');
+            const res = await fetch(`http://localhost:5000/foods?search=${search}`);
             const data = await res.json();
             return data;
         }

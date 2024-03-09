@@ -1,75 +1,36 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { A11y, Autoplay, Navigation, Pagination } from 'swiper';
-import 'swiper/css';
-import "swiper/css/navigation";
-import 'swiper/css/pagination';
-import banner1 from '../../../assets/images/01.jpg';
-import banner2 from '../../../assets/images/02.jpg';
-import banner3 from '../../../assets/images/03.png';
-import banner4 from '../../../assets/images/04.jpg';
-import banner5 from '../../../assets/images/05.png';
-import banner6 from '../../../assets/images/06.png';
+import React, { useRef } from 'react';
 import './Banner.css';
+import { Button, Form, InputGroup } from 'react-bootstrap';
 
-const Banner = () => {
+const Banner = ({ setSearch }) => {
+    const searchRef = useRef();
 
-    const bannerImages = [
-        {
-            id: 1,
-            img: banner1
-        },
-        {
-            id: 2,
-            img: banner2
-        },
-        {
-            id: 3,
-            img: banner3
-        },
-        {
-            id: 4,
-            img: banner4
-        },
-        {
-            id: 5,
-            img: banner5
-        },
-        {
-            id: 6,
-            img: banner6
-        },
-    ];
+    const handleSearch = () => {
+        setSearch(searchRef.current.value);
+    };
 
     return (
-        <div className='container'>
-            <Swiper
-                style={{
-                    "--swiper-pagination-color": "#f91944",
-                    "--swiper-pagination-bullet-inactive-color": "#999999",
-                    "--swiper-pagination-bullet-inactive-opacity": "1",
-                    "--swiper-pagination-bullet-size": "12px",
-                    "--swiper-pagination-bullet-horizontal-gap": "3px",
-
-                    "--swiper-navigation-color": "#fff",
-                    "--swiper-navigation-size": "18px",
-                }}
-                className="mySwiper"
-                modules={[A11y, Pagination, Navigation, Autoplay]}
-                autoplay={{
-                    delay: 3000,
-                    disableOnInteraction: false,
-                }}
-                navigation={true}
-                pagination={{ clickable: true }}
-            >
-                {
-                    bannerImages.map(bannerImage => <SwiperSlide>
-                        <img src={bannerImage.img} alt="Banner" className='w-100 rounded' />
-                    </SwiperSlide>)
-                }
-            </Swiper>
-        </div>
+        <section className='banner-section'>
+            <div>
+                <h1 className='banner-title'>Best food waiting for your belly</h1>
+                <InputGroup>
+                    <Form.Control
+                        ref={searchRef}
+                        type='text'
+                        className="search-input-feild"
+                        placeholder="Search food items"
+                        aria-label="Recipient's username"
+                        aria-describedby="basic-addon2"
+                    />
+                    <Button
+                        onClick={handleSearch}
+                        className='search-btn'
+                    >
+                        Search
+                    </Button>
+                </InputGroup>
+            </div>
+        </section>
     );
 };
 
