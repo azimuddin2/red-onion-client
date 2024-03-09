@@ -14,15 +14,15 @@ const Footer = () => {
                     <div className='footer-first-part-info'>
                         <p>
                             <MdLocationOn className='fs-5'></MdLocationOn>
-                            <span> Level-4, 34, Awal Centre, Banani, Dhaka</span>
+                            <span>Level-4, 34, Awal Centre, Banani, Dhaka</span>
                         </p>
                         <p>
                             <FaEnvelope></FaEnvelope>
-                            <span> Official: mohammadazimuddin274@gmail.com</span>
+                            <span>mohammadazimuddin274@gmail.com</span>
                         </p>
                         <p>
                             <FaPhone></FaPhone>
-                            <span> Helpline : 01883061967</span>
+                            <span>Helpline : 01883061967</span>
                         </p>
                     </div>
                 </div>
@@ -47,15 +47,15 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <p className='copyright'><small>Copyright © 2023 Red Onion</small></p>
+            <p className='copyright'><small>Copyright © 2024 Red Onion</small></p>
             <ScrollToTop
                 className='d-flex align-items-center justify-content-center'
                 smooth
-                color='#fff'
+                color='#f91944'
                 width='16'
                 height='16'
                 top='400'
-                style={{ backgroundColor: '#f91944', padding: '10px', boxShadow: 'none' }}
+                style={{ padding: '10px', boxShadow: 'none' }}
             ></ScrollToTop>
         </footer>
     );

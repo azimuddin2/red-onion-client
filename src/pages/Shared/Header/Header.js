@@ -27,7 +27,7 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto navbar-menu">
-                        <Nav.Link as={Link} to='/' className='position-relative'>
+                        <Nav.Link as={Link} to='/cart' className='position-relative'>
                             <FiShoppingCart className='fs-5'></FiShoppingCart>
                             <span style={{ backgroundColor: "#f91944" }} className="position-absolute top-1 translate-middle badge rounded-circle">
                                 {0}
@@ -37,9 +37,24 @@ const Header = () => {
                         <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
                         {
                             user?.uid ?
-                                <button onClick={handleLogOut} className='logout'>Logout</button>
+                                (
+                                    <button
+                                        onClick={handleLogOut}
+                                        className='login'
+                                    >
+                                        Logout
+                                    </button>
+                                )
                                 :
-                                <Nav.Link as={Link} to="/login" className='login'>Login</Nav.Link>
+                                (
+                                    <Nav.Link
+                                        as={Link}
+                                        to="/login"
+                                        className='login'
+                                    >
+                                        Login
+                                    </Nav.Link>
+                                )
                         }
                     </Nav>
                 </Navbar.Collapse>
