@@ -1,0 +1,30 @@
+.testimonials-part{
+    width: 80%;
+    margin: auto;
+}
+
+.swiper-button-prev {
+    background-color: #f91944;
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.swiper-button-next {
+    background-color: #f91944;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* responsive mobile device */
+@media screen and (max-width: 576px) {
+    .testimonials-part{
+        width: 100%;
+    }
+}
