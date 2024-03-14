@@ -6,6 +6,7 @@ import 'react-tabs/style/react-tabs.css';
 import FoodTab from '../FoodTab/FoodTab';
 import { useQuery } from '@tanstack/react-query';
 import Loading from '../../../Shared/Loading/Loading';
+import ErrorMessage from '../../../Shared/ErrorMessage/ErrorMessage';
 
 const Foods = ({ search }) => {
     const categories = ['breakfast', 'lunch', 'dinner'];
@@ -13,7 +14,7 @@ const Foods = ({ search }) => {
     const initialIndex = categories.indexOf(category);
     const [tabIndex, setTabIndex] = useState(initialIndex);
 
-    const { data: foods, isLoading, error } = useQuery({
+    const { data: foods = [], isLoading, error } = useQuery({
         queryKey: ['foods', search],
         queryFn: async () => {
             const res = await fetch(`http://localhost:5000/foods?search=${search}`);
@@ -31,7 +32,7 @@ const Foods = ({ search }) => {
     }
 
     if (error) {
-        return <p style={{ color: '#f91944', textAlign: 'center' }}>error: {error.message}</p>
+        return <ErrorMessage message={error.message}></ErrorMessage>
     }
 
     return (

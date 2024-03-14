@@ -1,4 +1,4 @@
-.foods{
+.foods {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -19,21 +19,27 @@
     bottom: 0 !important;
     position: relative;
     list-style: none;
-    padding: 6px 12px;
+    padding: 6px 20px;
     cursor: pointer;
+    font-weight: 500;
+    margin: 0px 6px;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 6px;
 }
 
 .react-tabs__tab--selected {
     background: none !important;
-    border-bottom: 2px solid #f91944 !important;
-    color: #f91944 !important;
-    font-weight: 500;
+    background-color: #f91944 !important;
+    color: white;
+    border-radius: 6px;
+    padding: 6px 20px;
+    border: none !important;
 }
 
 
 /* responsive mobile device */
 @media screen and (max-width: 576px) {
-    .foods{
+    .foods {
         grid-template-columns: repeat(1, 1fr);
     }
 }
@@ -41,7 +47,7 @@
 
 /* responsive tablet device */
 @media screen and (min-width: 577px) and (max-width: 992px) {
-    .foods{
+    .foods {
         grid-template-columns: repeat(2, 1fr);
     }
 }

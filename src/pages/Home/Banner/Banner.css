@@ -1,10 +1,9 @@
-.banner-section{
+.banner-section {
     background-image: url('../../../assets/images/background-image.png');
     background-size: cover;
     background-position: 100%;
     background-repeat: no-repeat;
     padding: 220px 0px;
-    /* min-height: 100vh; */
     width: 100%;
     height: 100%;
     display: flex;
@@ -12,19 +11,17 @@
     justify-content: center;
 }
 
-.banner-title{
+.banner-title {
     margin-bottom: 24px;
+    font-size: 36px;
 }
 
-.search-input-feild{
-    border-radius: 50px !important;
+.search-input-feild {
     padding: 10px 20px !important;
 }
 
-.search-btn{
+.search-btn {
     background-color: #f91944 !important;
     border: none !important;
-    border-radius: 50px !important;
-    padding: 10px 40px !important;
-    right: 36px;
+    padding: 10px 20px !important;
 }
