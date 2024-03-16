@@ -24,7 +24,7 @@
     line-height: normal;
 }
 
-.contact-us-info p{
+.contact-us-info p {
     color: #FFF;
     font-weight: 400;
 }
@@ -35,7 +35,7 @@
     .contact-us-image {
         padding: 40px 0px;
     }
-    
+
     .contact-us-info {
         width: 80%;
         margin: auto;
@@ -45,5 +45,5 @@
     .contact-us-info h1 {
         font-size: 40px;
     }
-    
+
 }

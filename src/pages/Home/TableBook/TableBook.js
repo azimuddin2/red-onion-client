@@ -5,6 +5,7 @@ import { FiCheckCircle } from 'react-icons/fi';
 import ReactDatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import toast from 'react-hot-toast';
+import { Fade } from 'react-awesome-reveal';
 
 const TableBook = () => {
     const [selectDate, setSelectDate] = useState(new Date());
@@ -25,7 +26,9 @@ const TableBook = () => {
     return (
         <section className='container table-book-container'>
             <div className='table-book-info'>
-                <h1>30% OFF</h1>
+                <Fade cascade damping={1e-1} className='table-book-discount'>
+                    30% Off Discount
+                </Fade>
                 <h2>For Online Reservation</h2>
                 <p>Lorem justo clita erat lorem labore ea, justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea.</p>
                 <div>

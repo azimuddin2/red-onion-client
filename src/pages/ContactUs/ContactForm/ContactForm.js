@@ -1,5 +1,6 @@
 import React from 'react';
 import './ContactForm.css';
+import toast from 'react-hot-toast';
 
 const ContactForm = () => {
 
@@ -12,6 +13,8 @@ const ContactForm = () => {
         const message = form.message.value;
 
         console.log(name, email, phone, message);
+        form.reset();
+        toast.success('Form submited successful.');
     };
 
     return (
@@ -60,7 +63,7 @@ const ContactForm = () => {
                             name="message"
                             cols="30"
                             rows="6"
-                            placeholder='Write your message here'
+                            placeholder='Write your message here...'
                             className='message-field'
                         ></textarea>
                     </div>

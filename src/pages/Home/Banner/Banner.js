@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import './Banner.css';
 import { Button, Form, InputGroup } from 'react-bootstrap';
+import { Fade } from 'react-awesome-reveal';
 
 const Banner = ({ setSearch }) => {
     const searchRef = useRef();
@@ -12,7 +13,9 @@ const Banner = ({ setSearch }) => {
     return (
         <section className='banner-section'>
             <div>
-                <h1 className='banner-title'>Best food waiting for your belly.</h1>
+                <Fade cascade damping={1e-1} className='banner-title'>
+                    Best food waiting for your belly.
+                </Fade>
                 <InputGroup>
                     <Form.Control
                         ref={searchRef}
