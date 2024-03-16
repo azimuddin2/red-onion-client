@@ -4,8 +4,10 @@ import TableBook from '../TableBook/TableBook';
 import ChooseUs from '../ChooseSection/ChooseUs/ChooseUs';
 import Banner from '../Banner/Banner';
 import Testimonials from '../Testimonials/Testimonials';
+import useTitle from '../../../hooks/useTitle';
 
 const Home = () => {
+    useTitle('Home');
     const [search, setSearch] = useState('');
 
     return (

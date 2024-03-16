@@ -83,7 +83,7 @@
 @media screen and (max-width: 576px) {
     .contact-form {
         background: var(--dark-07, #F3F3F3);
-        padding: 24px 12px;
+        padding: 24px 20px;
         width: 100%;
         margin: auto;
         margin-top: 30px;

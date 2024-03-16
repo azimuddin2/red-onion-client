@@ -5,8 +5,10 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaEyeSlash, FaEye } from 'react-icons/fa';
 import { toast } from 'react-hot-toast';
 import useAuth from '../../../hooks/useAuth';
+import useTitle from '../../../hooks/useTitle';
 
 const Login = () => {
+    useTitle('Login');
     const { signIn } = useAuth();
     const [showPassword, setShowPassword] = useState(false);
 

@@ -5,8 +5,10 @@ import { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { toast } from 'react-hot-toast';
 import useAuth from '../../../hooks/useAuth';
+import useTitle from '../../../hooks/useTitle';
 
 const SignUp = () => {
+    useTitle('SignUp');
     const { createUser, updateUserProfile } = useAuth();
     const [showPassword, setShowPassword] = useState(false);
 

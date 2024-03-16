@@ -2,8 +2,11 @@ import React from 'react';
 import Location from '../Location/Location';
 import ContactForm from '../ContactForm/ContactForm';
 import './ContactUs.css';
+import useTitle from '../../../hooks/useTitle';
 
 const ContactUs = () => {
+    useTitle('ContactUs');
+
     return (
         <section className='container'>
             <div className='contact-us-image'>
