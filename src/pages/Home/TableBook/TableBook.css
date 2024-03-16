@@ -7,7 +7,7 @@
 .table-book-info h1 {
     margin-top: 40px;
     color: #f91944;
-    font-size: 50px;
+    font-size: 44px;
     font-weight: 600;
 }
 
@@ -59,12 +59,22 @@
     }
 
     .table-book-form {
-        padding: 30px;
+        padding: 26px;
+        margin-top: 20px;
     }
 
-    .table-book-info{
+    .table-book-info {
         width: 88%;
         margin: auto;
+    }
+
+    .table-book-info h1 {
+        margin-top: 20px;
+        font-size: 40px;
+    }
+
+    .table-book-info h2 {
+        margin-bottom: 10px;
     }
 
     .table-book-info p {

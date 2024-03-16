@@ -51,11 +51,11 @@ const Footer = () => {
             <ScrollToTop
                 className='d-flex align-items-center justify-content-center'
                 smooth
-                color='#f91944'
+                color='#fff'
                 width='16'
                 height='16'
                 top='400'
-                style={{ padding: '10px', boxShadow: 'none' }}
+                style={{ backgroundColor: '#f91944', padding: '10px', boxShadow: 'none' }}
             ></ScrollToTop>
         </footer>
     );

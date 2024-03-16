@@ -25,3 +25,21 @@
     border: none !important;
     padding: 10px 20px !important;
 }
+
+
+/* responsive mobile device */
+@media screen and (max-width: 576px) {
+    .banner-section {
+        padding: 120px 0px;
+    }
+
+    .banner-title {
+        margin-bottom: 12px;
+        font-size: 24px;
+    }
+
+    .search-btn {
+        padding: 10px 12px !important;
+    }
+
+}

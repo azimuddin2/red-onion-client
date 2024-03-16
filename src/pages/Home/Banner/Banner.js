@@ -12,7 +12,7 @@ const Banner = ({ setSearch }) => {
     return (
         <section className='banner-section'>
             <div>
-                <h1 className='banner-title'>Best food waiting for your belly</h1>
+                <h1 className='banner-title'>Best food waiting for your belly.</h1>
                 <InputGroup>
                     <Form.Control
                         ref={searchRef}

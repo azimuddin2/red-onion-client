@@ -4,6 +4,7 @@ import { Form } from 'react-bootstrap';
 import { FiCheckCircle } from 'react-icons/fi';
 import ReactDatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import toast from 'react-hot-toast';
 
 const TableBook = () => {
     const [selectDate, setSelectDate] = useState(new Date());
@@ -17,6 +18,8 @@ const TableBook = () => {
         const person = form.person.value;
 
         console.log(name, email, date, person);
+        form.reset();
+        toast.success('Table Booking successfully.');
     };
 
     return (
@@ -42,7 +45,6 @@ const TableBook = () => {
                             required
                         />
                     </Form.Group>
-
                     <Form.Group controlId="formBasicEmail" className='mb-3'>
                         <Form.Control
                             name='email'
@@ -51,7 +53,6 @@ const TableBook = () => {
                             required
                         />
                     </Form.Group>
-
                     <Form.Group controlId="formBasicDate" className='mb-3'>
                         <ReactDatePicker
                             name='date'
@@ -63,7 +64,6 @@ const TableBook = () => {
                             dateFormat="Pp"
                         />
                     </Form.Group>
-
                     <Form.Group controlId="formGridState" className='mb-4'>
                         <Form.Control name='person' as="select">
                             <option>Select Person</option>
