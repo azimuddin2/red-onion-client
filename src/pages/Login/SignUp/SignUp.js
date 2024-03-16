@@ -29,6 +29,7 @@ const SignUp = () => {
                 handleUpdateUserProfile(name, phone);
                 form.reset();
                 navigate(from, { replace: true });
+                toast.success('User SignUp Successfully.');
             })
             .catch(error => {
                 toast.error(error.message);
@@ -52,7 +53,7 @@ const SignUp = () => {
         <section className='login-container'>
             <div>
                 <Link to='/'>
-                    <img src={logo} alt="" className='login-logo' />
+                    <img src={logo} alt="logo" className='login-logo' />
                 </Link>
                 <div className='form-container'>
                     <form onSubmit={handleSubmit}>

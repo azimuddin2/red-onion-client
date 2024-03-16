@@ -5,6 +5,8 @@ import Foods from "../pages/Home/FoodSection/Foods/Foods";
 import Login from "../pages/Login/Login/Login";
 import SignUp from "../pages/Login/SignUp/SignUp";
 import ContactUs from "../pages/ContactUs/ContactUs/ContactUs";
+import PrivateRoute from "./PrivateRoute";
+import Cart from "../pages/Cart/Cart";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +24,12 @@ const router = createBrowserRouter([
             {
                 path: 'contact',
                 element: <ContactUs></ContactUs>
+            },
+            {
+                path: 'cart',
+                element: <PrivateRoute>
+                    <Cart></Cart>
+                </PrivateRoute>
             }
         ]
     },

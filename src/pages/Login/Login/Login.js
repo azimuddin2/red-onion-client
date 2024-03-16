@@ -36,7 +36,7 @@ const Login = () => {
         <section className='login-container'>
             <div>
                 <Link to='/'>
-                    <img src={logo} alt="" className='login-logo' />
+                    <img src={logo} alt="logo" className='login-logo' />
                 </Link>
                 <div className='form-container'>
                     <form onSubmit={handleSubmit}>

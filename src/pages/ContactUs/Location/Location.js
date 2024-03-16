@@ -3,7 +3,7 @@ import { BiPhoneCall } from 'react-icons/bi';
 import { MdLocationOn } from 'react-icons/md';
 import { FaClock } from 'react-icons/fa';
 import './Location.css';
-import { Fade, Slide } from 'react-awesome-reveal';
+import { Slide } from 'react-awesome-reveal';
 
 const Location = () => {
     return (
