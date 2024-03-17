@@ -38,7 +38,7 @@
     justify-content: center;
 }
 
-.shop-icon {
+.cart-btn {
     background-color: #f91944;
     color: #fff;
     width: 30px;
@@ -49,10 +49,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
 }
 
-.shop-icon:hover {
+.cart-btn:hover {
     background-color: #fff;
     color: #f91944;
-    border: 1px solid #f91944;
+    border: 2px solid #f91944;
 }

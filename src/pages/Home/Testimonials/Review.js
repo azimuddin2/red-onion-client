@@ -13,7 +13,7 @@ const Review = ({ review }) => {
                     starRatedColor="#f91944"
                     name="rating"
                     starSpacing="2px"
-                    starDimension="30px"
+                    starDimension="24px"
                 />
             </div>
             <img src={quote} alt="quote" style={{ width: '60px' }} className='mx-auto mt-3' />
