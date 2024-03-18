@@ -9,6 +9,7 @@ import './Carts.css';
 const Carts = () => {
     useTitle('Cart');
     const [carts, refetch, isLoading, error] = useCart();
+    const totalPrice = carts.reduce((sum, item) => item.price + sum, 0);
 
     if (isLoading) {
         return <Loading></Loading>
@@ -30,7 +31,8 @@ const Carts = () => {
                 }
             </div>
             <div>
-               
+                <h2>Selected Food: {carts.length}</h2>
+                <h3>Total Price: ${totalPrice.toFixed(2)}</h3>
             </div>
         </section>
     );
