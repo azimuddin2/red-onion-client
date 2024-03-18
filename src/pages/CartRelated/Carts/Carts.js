@@ -1,10 +1,10 @@
 import React from 'react';
+import './Carts.css';
 import useTitle from '../../../hooks/useTitle';
 import useCart from '../../../hooks/useCart';
 import Loading from '../../Shared/Loading/Loading';
 import ErrorMessage from '../../Shared/ErrorMessage/ErrorMessage';
 import CartItem from '../CartItem/CartItem';
-import './Carts.css';
 import { IoArrowForwardCircleOutline } from 'react-icons/io5';
 import cartGif from '../../../assets/images/cart.gif';
 import { Link } from 'react-router-dom';
@@ -45,7 +45,7 @@ const Carts = () => {
                                 <h3>Total Price: ${totalPrice.toFixed(2)}</h3>
                                 <button className='order-btn'>
                                     <span>Place Order</span>
-                                    <IoArrowForwardCircleOutline className=' fs-5 ms-1' />
+                                    <IoArrowForwardCircleOutline className='fs-5 ms-1' />
                                 </button>
                             </div>
                         </div>
@@ -53,11 +53,11 @@ const Carts = () => {
                     :
                     (
                         <div className='text-center'>
-                            <img src={cartGif} alt="cartGif" />
+                            <img className='cart-gif' src={cartGif} alt="cartGif" />
                             <Link to={'/'} className='text-decoration-none d-flex justify-content-center'>
                                 <button className='order-btn'>
                                     <span>Please Add to Cart</span>
-                                    <IoArrowForwardCircleOutline className=' fs-5 ms-1' />
+                                    <IoArrowForwardCircleOutline className='fs-5 ms-1' />
                                 </button>
                             </Link>
                         </div>
