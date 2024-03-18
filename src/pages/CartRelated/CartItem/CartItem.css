@@ -3,11 +3,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 16px;
+    margin: 12px;
     padding: 20px;
     border-radius: 10px;
 }
 
 .cart-item-info h2{
-    font-size: 20px;
+    font-size: 18px;
+}
+
+.delete-btn{
+    background-color: none !important;
 }

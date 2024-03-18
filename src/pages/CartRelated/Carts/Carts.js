@@ -1,9 +1,10 @@
 import React from 'react';
-import useTitle from '../../hooks/useTitle';
-import useCart from '../../hooks/useCart';
-import Loading from '../Shared/Loading/Loading';
-import ErrorMessage from '../Shared/ErrorMessage/ErrorMessage';
-import CartItem from './CartItem';
+import useTitle from '../../../hooks/useTitle';
+import useCart from '../../../hooks/useCart';
+import Loading from '../../Shared/Loading/Loading';
+import ErrorMessage from '../../Shared/ErrorMessage/ErrorMessage';
+import CartItem from '../CartItem/CartItem';
+import './Carts.css';
 
 const Carts = () => {
     useTitle('Cart');
@@ -18,7 +19,7 @@ const Carts = () => {
     }
 
     return (
-        <section className='container my-5'>
+        <section className='container my-5 carts-container'>
             <div>
                 {
                     carts?.map(cartItem => <CartItem
@@ -27,6 +28,9 @@ const Carts = () => {
                         refetch={refetch}
                     ></CartItem>)
                 }
+            </div>
+            <div>
+               
             </div>
         </section>
     );
