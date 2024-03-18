@@ -8,16 +8,52 @@ import toast from 'react-hot-toast';
 
 const CartItem = ({ cartItem, refetch }) => {
     const { name, image, price, quantity } = cartItem;
+
     const [newQuantity, setNewQuantity] = useState(quantity);
     const totalPrice = price * newQuantity;
 
-    const handleAddQuantity = () => {
+    const handleAddQuantity = (item) => {
         setNewQuantity(newQuantity + 1);
+
+        const updateQuantity = {
+            quantity: newQuantity + 1
+        };
+        fetch(`http://localhost:5000/carts/${item._id}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updateQuantity)
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result.modifiedCount) {
+                    refetch();
+                }
+            })
     };
 
-    const handleRemoveQuantity = () => {
+    const handleRemoveQuantity = (item) => {
         if (newQuantity > 1) {
-            setNewQuantity(newQuantity - 1)
+            setNewQuantity(newQuantity - 1);
+
+            const updateQuantity = {
+                quantity: newQuantity - 1
+            };
+
+            fetch(`http://localhost:5000/carts/${item._id}`, {
+                method: 'PATCH',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(updateQuantity)
+            })
+                .then(res => res.json())
+                .then(result => {
+                    if (result.modifiedCount) {
+                        refetch();
+                    }
+                })
         }
     };
 
@@ -57,14 +93,14 @@ const CartItem = ({ cartItem, refetch }) => {
             <div>
                 <div className='d-flex align-items-center'>
                     <button
-                        onClick={handleRemoveQuantity}
+                        onClick={() => handleRemoveQuantity(cartItem)}
                         className='border-0 d-flex align-items-center p-1 rounded-1'
                     >
                         <IoRemove />
                     </button>
                     <span className='bg-white px-2 mx-2 rounded-1'>{newQuantity}</span>
                     <button
-                        onClick={handleAddQuantity}
+                        onClick={() => handleAddQuantity(cartItem)}
                         className='border-0 d-flex  align-items-center p-1 rounded-1'
                     >
                         <IoMdAdd />
