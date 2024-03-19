@@ -12,6 +12,11 @@
     font-size: 18px;
 }
 
+.cart-item-info p {
+    color: #f91944;
+    font-weight: 600;
+}
+
 .delete-btn{
     background-color: none !important;
 }
