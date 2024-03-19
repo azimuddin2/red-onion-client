@@ -8,33 +8,35 @@
     width: 100%;
     margin: auto;
     border: 1px solid #95A0A7;
-    /* background-color: var(--dark-07, #F3F3F3); */
     border-radius: 10px;
-    /* margin: 60px auto; */
     padding: 40px;
 }
 
-.input-field {
+.input-fields {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 14px;
     border: 1px solid #95A0A7;
-    /* background-color: #fff; */
 }
 
-.form-submit {
+.input-fields {
+    outline-color: #f91944;
+}
+
+.pay-btn {
     width: 100%;
     background: #f91944;
     border-radius: 6px;
     border: none;
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 400;
     color: #fff;
-    padding: 5px 0px;
+    padding: 6px 0px;
+    margin-top: 12px;
 }
 
-.form-submit:hover {
+.pay-btn:hover {
     background-color: #1C2B35;
     cursor: pointer;
     transition: 0.5s ease-in-out;
@@ -45,24 +47,17 @@
 /* responsive mobile device */
 @media screen and (max-width: 576px) {
     .checkout-container {
-        display: grid;
         grid-template-columns: repeat(1, 1fr);
         padding: 0px;
     }
 
-    .checkout-form {
-        box-shadow: none;
-        width: 90%;
-        margin-bottom: 60px;
-        margin-top: 0px;
-        padding-bottom: 20px;
-    }
-
-    .input-group select {
-        width: 90%;
-    }
-
-    .payment-img {
+    .payment-gif {
         width: 100%;
+    }
+
+    .checkout-form {
+        width: 90%;
+        margin: auto;
+        padding: 24px 20px;
     }
 }
