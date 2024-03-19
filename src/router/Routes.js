@@ -7,6 +7,7 @@ import SignUp from "../pages/Login/SignUp/SignUp";
 import ContactUs from "../pages/ContactUs/ContactUs/ContactUs";
 import PrivateRoute from "./PrivateRoute";
 import Carts from "../pages/CartRelated/Carts/Carts";
+import PlaceOrder from "../pages/PlaceOrder/PlaceOrder";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,12 @@ const router = createBrowserRouter([
                 path: 'cart',
                 element: <PrivateRoute>
                     <Carts></Carts>
+                </PrivateRoute>
+            },
+            {
+                path: 'place-order',
+                element: <PrivateRoute>
+                    <PlaceOrder></PlaceOrder>
                 </PrivateRoute>
             }
         ]

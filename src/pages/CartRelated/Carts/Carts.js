@@ -43,10 +43,12 @@ const Carts = () => {
                                 <h2>Selecte Food: {carts?.length}</h2>
                                 <h2>Subtotal Item: {totalQuantity}</h2>
                                 <h3>Total Price: ${totalPrice.toFixed(2)}</h3>
-                                <button className='order-btn'>
-                                    <span>Place Order</span>
-                                    <IoArrowForwardCircleOutline className='fs-5 ms-1' />
-                                </button>
+                                <Link to={'/place-order'} className='text-decoration-none'>
+                                    <button className='order-btn'>
+                                        <span>Place Order</span>
+                                        <IoArrowForwardCircleOutline className='fs-5 ms-1' />
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     )
