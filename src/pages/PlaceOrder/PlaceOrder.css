@@ -1,7 +1,7 @@
 .checkout-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 0px 80px;
+    padding: 0px 80px !important;
 }
 
 .checkout-form {
@@ -48,7 +48,7 @@
 @media screen and (max-width: 576px) {
     .checkout-container {
         grid-template-columns: repeat(1, 1fr);
-        padding: 0px;
+        padding: 0px !important;
     }
 
     .payment-gif {
@@ -56,7 +56,7 @@
     }
 
     .checkout-form {
-        width: 90%;
+        width: 92%;
         margin: auto;
         padding: 24px 20px;
     }

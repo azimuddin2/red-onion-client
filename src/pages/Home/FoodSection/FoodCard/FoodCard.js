@@ -25,7 +25,7 @@ const FoodCard = ({ item }) => {
             email: user?.email
         };
         if (user?.email) {
-            fetch('http://localhost:5000/carts', {
+            fetch('https://red-onion-server-sigma.vercel.app/carts', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

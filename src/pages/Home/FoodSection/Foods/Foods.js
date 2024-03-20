@@ -17,7 +17,7 @@ const Foods = ({ search }) => {
     const { data: foods = [], isLoading, error } = useQuery({
         queryKey: ['foods', search],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/foods?search=${search}`);
+            const res = await fetch(`https://red-onion-server-sigma.vercel.app/foods?search=${search}`);
             const data = await res.json();
             return data;
         }

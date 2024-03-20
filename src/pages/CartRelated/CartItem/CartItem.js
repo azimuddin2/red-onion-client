@@ -18,7 +18,7 @@ const CartItem = ({ cartItem, refetch }) => {
         const updateQuantity = {
             quantity: newQuantity + 1
         };
-        fetch(`http://localhost:5000/carts/${item._id}`, {
+        fetch(`https://red-onion-server-sigma.vercel.app/carts/${item._id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -41,7 +41,7 @@ const CartItem = ({ cartItem, refetch }) => {
                 quantity: newQuantity - 1
             };
 
-            fetch(`http://localhost:5000/carts/${item._id}`, {
+            fetch(`https://red-onion-server-sigma.vercel.app/carts/${item._id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json'
@@ -67,7 +67,7 @@ const CartItem = ({ cartItem, refetch }) => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    fetch(`http://localhost:5000/carts/${item._id}`, {
+                    fetch(`https://red-onion-server-sigma.vercel.app/carts/${item._id}`, {
                         method: 'DELETE'
                     })
                         .then(res => res.json())
