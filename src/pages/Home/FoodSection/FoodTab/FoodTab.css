@@ -36,11 +36,23 @@
     border: none !important;
 }
 
+.not-result-found h2 {
+    font-size: 26px;
+}
+
+.not-result-found p {
+    font-size: 16px;
+}
+
 
 /* responsive mobile device */
 @media screen and (max-width: 576px) {
     .foods {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .search-gif {
+        width: 100%;
     }
 }
 

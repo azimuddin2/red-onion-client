@@ -20,8 +20,10 @@ const FoodTab = ({ items }) => {
                     )
                     :
                     (
-                        <div className='text-center'>
-                            <img src={searchGif} alt="search" />
+                        <div className='not-result-found text-center'>
+                            <img src={searchGif} alt="search" className='search-gif' />
+                            <h2>Ups!... no results found</h2>
+                            <p>Please try another search</p>
                         </div>
                     )
             }
